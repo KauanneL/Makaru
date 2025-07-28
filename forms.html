@@ -1,62 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tire sua dúvida</title>
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-    crossorigin="anonymous"
-  />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Envie sua dúvida e avalie</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
-<body>
-    <form class="row g-3">
-        <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">📧E-mail:</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="beltrano@gmail.com">
-        </div>
-        <div class="col-md-6">
-            <label for="inputTelefone" class="form-label">📞Telefone:</label>
-            <input type="tel" class="form-control" id="inputTelefone" placeholder="(84) 9 0000-0000">
+
+<body class="bg-light">
+
+  <!-- Hero / Cabeçalho -->
+  <section class="py-5 text-center bg-success text-white">
+    <div class="container">
+      <h1 class="display-5 fw-bold">📩 Fale Conosco</h1>
+      <p class="lead">Envie sua dúvida e nos diga como foi sua experiência!</p>
+    </div>
+  </section>
+
+  <!-- Formulário -->
+  <section class="py-5">
+    <div class="container">
+      <div class="card shadow rounded-4 p-4">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="inputNome" class="form-label">👤 Nome:</label>
+            <input type="text" class="form-control" id="inputNome" placeholder="Seu nome completo">
           </div>
-          
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
-        <div class="col-md-6">
-          <label for="inputCity" class="form-label">City</label>
-          <input type="text" class="form-control" id="inputCity">
-        </div>
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">State</label>
-          <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
-        </div>
-        <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
+
+          <div class="col-md-6">
+            <label for="inputEmail" class="form-label">📧 E-mail:</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="exemplo@gmail.com">
           </div>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
-        </div>
-      </form>
+
+          <div class="col-12">
+            <label for="inputDuvida" class="form-label">❓ Sua dúvida:</label>
+            <textarea class="form-control" id="inputDuvida" rows="4" placeholder="Digite aqui sua dúvida..."></textarea>
+          </div>
+
+          <div class="col-12">
+            <label for="inputSatisfacao" class="form-label">📝 Nível de satisfação com o conteúdo:</label>
+            <input type="range" class="form-range" min="0" max="10" step="1" id="inputSatisfacao">
+            <div class="d-flex justify-content-between px-1">
+              <small>0 - Muito insatisfeito</small>
+              <small>10 - Muito satisfeito</small>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="aceitaContato">
+              <label class="form-check-label" for="aceitaContato">
+                Aceito ser contatado para esclarecer minha dúvida
+              </label>
+            </div>
+          </div>
+
+          <div class="col-12 text-center mt-4">
+            <button type="submit" class="btn btn-success btn-lg px-5">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
 </body>
+
 </html>
