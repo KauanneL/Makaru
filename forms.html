@@ -39,12 +39,23 @@
           </div>
 
           <div class="col-12">
-            <label for="inputSatisfacao" class="form-label">📝 Nível de satisfação com o conteúdo:</label>
-            <input type="range" class="form-range" min="0" max="10" step="1" id="inputSatisfacao">
-            <div class="d-flex justify-content-between px-1">
-              <small>0 - Muito insatisfeito</small>
-              <small>10 - Muito satisfeito</small>
-            </div>
+            <label for="inputSatisfacao" class="form-label">📝 Nível de satisfação com o conteúdo (de 0 a 10):</label>
+
+            <input type="range" class="form-range" min="0" max="10" value="5" id="customRange4">
+            <output for="customRange4" id="rangeValue" aria-hidden="true"></output>
+
+            <script>
+              // This is an example script, please modify as needed
+              const rangeInput = document.getElementById('customRange4');
+              const rangeOutput = document.getElementById('rangeValue');
+
+              // Set initial value
+              rangeOutput.textContent = rangeInput.value;
+
+              rangeInput.addEventListener('input', function () {
+                rangeOutput.textContent = this.value;
+              });
+            </script>
           </div>
 
           <div class="col-12">
